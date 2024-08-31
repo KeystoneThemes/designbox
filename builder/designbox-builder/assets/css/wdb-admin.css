@@ -1,0 +1,763 @@
+.admin_page_wdb_addons_setup_page,
+.wdb-addons_page_wdb_addons_settings {
+  background: #fff;
+}
+.wdb-admin-wrapper {
+    padding: 0px;
+    background-color: #ffffff;
+    font-family: Roboto,sans-serif;
+    color: #3c3c3e;
+    --color1: #d1d2d6;
+    --color2: #888888;
+    --main-color: #9bee68;
+    margin: 0px 0px 0px -20px;
+}
+.wdb-admin-wrapper svg {
+  width: 1em;
+  height: 1em;
+}
+.wdb-admin-wrapper .wdb-admin-btn {
+  background: #f6f6f6;
+  color: #3c3c3e;
+  fill: #3c3c3e;
+  padding: 18px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+.wdb-admin-wrapper .wdb-admin-btn:hover {
+  background-color: #3c3c3e;
+  color: #fff;
+  fill: #fff;
+}
+.wdb-admin-wrapper .wdb-admin-btn.wdb-settings-next,
+.wdb-admin-wrapper .wdb-admin-btn.wdb-settings-save {
+    background: #9bee68;
+    color: #2e7400;
+    fill: #2e7400;
+    font-weight: 500;
+}
+.wdb-admin-wrapper .wdb-admin-btn.wdb-settings-next:hover,
+.wdb-admin-wrapper .wdb-admin-btn.wdb-settings-save:hover {
+    background: #85d85a; /* Slightly darker green for hover */
+    color: #1f5600; /* Darker shade of green for the text on hover */
+    fill: #1f5600; /* Darker fill color for icons on hover */
+}
+.wdb-admin-wrapper .title-1 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 600;
+  color: #3c3c3e;
+  margin: 0;
+}
+.wdb-admin-wrapper .title-2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #3c3c3e;
+  margin: 0;
+}
+.wdb-admin-wrapper .title-3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  color: #3c3c3e;
+  margin: 0;
+}
+.wdb-admin-wrapper .settings-wrap {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.wdb-admin-wrapper .settings-wrap .section-header {
+  background-color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.wdb-admin-wrapper .settings-wrap .section-header .info span {
+  font-size: 16px;
+  color: #888;
+}
+.wdb-admin-wrapper .settings-wrap .section-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3c3c3e;
+  margin: 0 0 12px;
+}
+.wdb-admin-wrapper .settings-wrap .section-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.wdb-admin-wrapper .wdb-admin-search {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.wdb-admin-wrapper .wdb-admin-search input {
+  padding: 16px 20px;
+  color: #909090;
+  font-size: 16px;
+}
+.wdb-admin-wrapper .wdb-admin-search button {
+  padding: 10px;
+  height: 66px;
+  width: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.wdb-admin-wrapper .wdb-admin-search button,
+.wdb-admin-wrapper .wdb-admin-search input {
+  outline: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.031372549);
+}
+.wdb-admin-wrapper .switcher input {
+  display: none;
+}
+.wdb-admin-wrapper .switcher label {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+}
+.wdb-admin-wrapper .switcher .control-label-switch {
+  position: relative;
+  overflow: hidden;
+  min-width: 52px;
+  height: 26px;
+  display: inline-block;
+}
+.wdb-admin-wrapper .switcher .control-label-switch::before {
+  content: attr(data-inactive);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: #efefef solid 1px;
+  border-radius: 10px;
+  text-indent: 24px;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.wdb-admin-wrapper .switcher .control-label-switch::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: attr(data-active);
+  width: 18px;
+  height: 18px;
+  background-color: #3c3c3e;
+  border-radius: 100%;
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-indent: -22px;
+  display: flex;
+}
+.wdb-admin-wrapper
+  .switcher
+  input:checked
+  ~ label
+  .control-label-switch::before {
+  border-color: #efefef;
+  text-indent: 52px;
+  border: #3c3c3e solid 1px;
+}
+.wdb-admin-wrapper
+  .switcher
+  input:checked
+  ~ label
+  .control-label-switch::after {
+  left: 30px;
+  background-color: #2e7400;
+  color: #2e7400;
+}
+.wdb-admin-wrapper .switcher input:disabled ~ label .control-label-switch {
+  opacity: 0.3;
+}
+.wdb-admin-wrapper .title-area {
+  background-color: #fff;
+  padding: 26px 30px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.wdb-admin-wrapper .title-area .header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.wdb-admin-wrapper .title-area h4 {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0;
+}
+.wdb-admin-wrapper .title-area i {
+  display: inline-block;
+  margin-top: 10px;
+}
+.wdb-admin-wrapper .settings-group {
+  margin-top: 10px;
+}
+.wdb-admin-wrapper .settings-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3px;
+}
+.wdb-admin-wrapper .settings-wrapper .item {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.wdb-admin-wrapper .settings-wrapper .item .title {
+  font-size: 16px;
+}
+.wdb-admin-wrapper .settings-wrapper .item .actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.wdb-admin-wrapper .settings-wrapper .item .actions a {
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wdb-admin-wrapper .settings-wrapper .item .actions .wdb-plugin-installer {
+  font-size: 16px;
+  width: auto;
+  height: auto;
+  padding: 5px 12px;
+  cursor: pointer;
+  border: 1px solid rgba(241, 37, 41, 0.2);
+  color: #9bee68;
+}
+.wdb-admin-wrapper
+  .settings-wrapper
+  .item
+  .actions
+  .wdb-plugin-installer.active {
+  border: 1px solid rgba(110, 197, 49, 0.2);
+  color: #6ec531;
+}
+.wdb-admin-wrapper
+  .settings-wrapper
+  .item
+  .actions
+  .wdb-plugin-installer.activated {
+  border: 1px solid #efefef;
+  color: #3c3c3e;
+  pointer-events: none;
+}
+.wdb-admin-wrapper .settings-wrapper .item .ribbon {
+  width: 66px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 4px;
+  position: absolute;
+  right: -18px;
+  top: 8px;
+  text-align: center;
+  transform: rotate(45deg);
+  background: #9bee68;
+  color: #fff;
+  text-transform: uppercase;
+}
+.wdb-admin-wrapper .wizard-integration .settings-wrapper .item {
+  overflow: visible;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.wdb-admin-wrapper .wizard-integration .settings-wrapper .item .title {
+  font-weight: 600;
+}
+.wdb-admin-wrapper .wizard-integration .settings-wrapper .item .desc {
+  width: 100%;
+}
+.wdb-admin-wrapper .wizard-integration .settings-wrapper .item .ribbon {
+  width: 100px;
+  right: 0;
+  top: 0;
+  transform: rotate(0);
+}
+.wdb-admin-wrapper .wizard-integration .settings-wrapper .item .actions {
+  margin-left: auto;
+  margin-top: 10px;
+}
+.wdb-admin-wrapper .wdb-admin-tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-bottom: 24px;
+    background: #262626;
+    padding: 24px;
+}
+.wdb-admin-wrapper .wdb-admin-tab button {
+  background-color: inherit;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color1);
+  position: relative;
+}
+.wdb-admin-wrapper .wdb-admin-tab button:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 3px;
+  background: var(--main-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.wdb-admin-wrapper .wdb-admin-tab button.active {
+  color: var(--main-color);
+}
+.wdb-admin-wrapper .wdb-admin-tab button.active:after {
+  opacity: 1;
+  visibility: visible;
+}
+.wdb-admin-wrapper .wdb-tab-pane {
+  display: none;
+}
+.wdb-admin-wrapper .wdb-settings-footer {
+  margin-top: 120px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wdb-admin-wrapper .wdb-settings-footer .footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wdb-admin-tab-content .settings-home-wrap .content-wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  flex: 1;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .statistic-head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .wdb-statistic
+  .statistic-head
+  .icon {
+  background: #ffe9e9;
+  fill: #ff1e1e;
+  height: 80px;
+  width: 76px;
+  border-radius: 30px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .statistic-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item {
+  padding: 20px;
+  border-radius: 15px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item .head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item .icon {
+  background: #fff;
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item .title {
+  color: #ffffff;
+  font-size: 16px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item .count {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  margin-top: 100px;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item.total-item {
+  background: #2e7400;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .wdb-statistic
+  .item.total-item
+  .icon {
+  fill: #32cece;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item.active-item {
+  background: #66b13a;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .wdb-statistic
+  .item.active-item
+  .icon {
+  fill: #46a1ff;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-statistic .item.inactive-item {
+  background: #7fd051;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .wdb-statistic
+  .item.inactive-item
+  .icon {
+  fill: #ffd600;
+}
+.wdb-admin-tab-content .settings-home-wrap .wdb-sidebar {
+  width: 460px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.wdb-admin-tab-content .settings-home-wrap .ui-accordion .ui-accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #fff;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .ui-accordion
+  .ui-accordion-header:first-child {
+  margin-top: 0;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .ui-accordion
+  .ui-accordion-header
+  .ui-icon {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  border: 1px solid #efefef;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-left: auto;
+  order: 2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='2' viewBox='0 0 12 2' fill='none'%3E%3Cpath d='M6 0.999954H6.5' stroke='%231C3063' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 1H11' stroke='%231C3063' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .ui-accordion
+  .ui-accordion-header.ui-state-active
+  .ui-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M6 1V11' stroke='%231C3063' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 6H11' stroke='%231C3063' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.wdb-admin-tab-content .settings-home-wrap .ui-accordion .ui-accordion-content {
+  background-color: #fff;
+  margin: 0;
+  padding: 15px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .ui-accordion
+  .ui-accordion-content
+  a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color1);
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+.wdb-admin-tab-content
+  .settings-home-wrap
+  .ui-accordion
+  .ui-accordion-content
+  .desc {
+  font-size: 16px;
+  color: var(--color2);
+}
+.wdb-admin-wrapper .wizard-content {
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+.wdb-admin-wrapper .wizard-congrats,
+.wdb-admin-wrapper .wizard-welcome {
+  text-align: center;
+  background-color: #fff;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wdb-admin-wrapper .wizard-congrats .icon,
+.wdb-admin-wrapper .wizard-welcome .icon {
+  font-size: 210px;
+}
+.wdb-admin-wrapper .wizard-congrats h2,
+.wdb-admin-wrapper .wizard-welcome h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #3c3c3e;
+}
+.wdb-admin-wrapper .wizard-congrats .desc,
+.wdb-admin-wrapper .wizard-welcome .desc {
+  max-width: 1024px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #888;
+  margin-bottom: 30px;
+}
+.wdb-admin-wrapper .wizard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.wdb-admin-wrapper .wizard-form .settings-wrap {
+  border-radius: 0 0 15px 15px;
+}
+.wdb-admin-wrapper .wizard-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.wdb-admin-wrapper .wizard-content {
+  display: none;
+}
+.wdb-admin-wrapper .wizard-content.active {
+  display: block;
+}
+.wdb-admin-wrapper .btn {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: 0;
+}
+.wdb-admin-wrapper .btn.bordered {
+  border-color: #1e4dba;
+  color: #1e4dba;
+}
+.wdb-admin-wrapper .btn.primary {
+  background-color: #1e4dba;
+  color: #fff;
+}
+.wdb-admin-wrapper .btn[disabled] {
+  cursor: not-allowed;
+}
+.wdb-admin-wrapper .wizard-wrap {
+  background-color: #fff;
+  padding: 80px 50px;
+  border-radius: 15px 15px 0 0;
+}
+.wdb-admin-wrapper .wizard {
+  position: relative;
+  margin: 0 auto;
+  max-width: 620px;
+}
+.wdb-admin-wrapper .wizard-bar {
+  position: absolute;
+  background-color: #dedede;
+  height: 1px;
+  bottom: 8px;
+  width: calc(100% - 60px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wdb-admin-wrapper .wizard-bar:before {
+  content: "";
+  position: absolute;
+  background-color: #9bee68;
+  height: 1px;
+  width: var(--width, 0);
+  left: 0;
+  transition: 0.3s ease;
+}
+.wdb-admin-wrapper .wizard-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+.wdb-admin-wrapper .wizard-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 2;
+  margin: 0;
+  transition: 0.4s ease;
+}
+.wdb-admin-wrapper .wizard-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  font-size: 20px;
+  transition: 0.4s ease;
+  color: #203263;
+  fill: #203263;
+}
+.wdb-admin-wrapper .wizard-item .title {
+  font-size: 16px;
+  line-height: 1;
+  color: #888;
+  transition: 0.4s ease;
+}
+.wdb-admin-wrapper .wizard-item .step-circle {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  border: 1px solid #dedede;
+  background: #fff;
+  box-sizing: border-box;
+  transition: 0.4s ease;
+}
+.wdb-admin-wrapper .wizard-item .step-circle:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease;
+}
+.wdb-admin-wrapper .wizard-item.active .title {
+  color: #3c3c3e;
+}
+.wdb-admin-wrapper .wizard-item.active .step-circle {
+  border-color: #9bee68;
+}
+.wdb-admin-wrapper .wizard-item.active .step-circle:after {
+  background: #9bee68;
+}
+.wdb-admin-wrapper .wizard-item.current .icon {
+  border-color: #9bee68;
+  color: #9bee68;
+  fill: #9bee68;
+}
+.wdb-admin-wrapper .wizard-item.current .title {
+  color: #9bee68;
+}
+.smooth-scroller-settings .input-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: start;
+}
+.smooth-scroller-settings .input-items label {
+  font-weight: 600;
+}
+.smooth-scroller-settings .input-items input {
+  border: 1px solid #d3dbe7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f8fbff;
+  font-size: 15px;
+  color: #656565;
+}
+.smooth-scroll {
+  position: relative;
+  padding-right: 25px;
+}
+.smooth-settings {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+
