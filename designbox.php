@@ -3,7 +3,7 @@
  * Plugin Name: DesignBox
  * Description: DesignBox is an Elementor addon that enables custom header, footer, single post, animations and more.
  * Plugin URI:  https://wpdesignbox.com/designbox-plugin
- * Version:     2.0
+ * Version:     3.0
  * Author:      wpdesignbox
  * Author URI:  https://wpdesignbox.com/
  * Text Domain: designbox
